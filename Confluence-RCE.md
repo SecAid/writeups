@@ -129,7 +129,7 @@ Though we got the code execution, there was a limitation on how the command is r
 
 To circumvant this we could have used overloaded exec method which takes array as an argument.
 
-```java.lang.Runtime.getRuntime().exec(new String[]{{"/bin/bash","-c", "any linux command here"})```
+```java.lang.Runtime.getRuntime().exec(new String[]\{\{"/bin/bash","-c", "any linux command here"\})```
 
 But unfortunately `isSafeExpression` gets triggerd with the usage of `new String[]`. We spent a good amount of time creating java arrays with the help of Reflections API but no luck with this as well.
 
